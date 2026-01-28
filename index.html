@@ -6,7 +6,7 @@
     <title>BindingAffinity | The Molecular Currency of the AI Era</title>
     <meta name="description" content="Acquire the definitive digital asset portfolio for AI Drug Discovery: BindingAffinity.com + BindingAffinity.ai.">
 
-    <!-- Fonts: Space Grotesk (Tech) & Inter (Body) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
@@ -20,11 +20,8 @@
             --bg-card: #0f1011;
             --text-main: #f1f5f9;
             --text-muted: #94a3b8;
-            --accent-blue: #3b82f6;
-            --accent-bio: #10b981;
-            --accent-purple: #8b5cf6;
             --border: rgba(255,255,255,0.08);
-            --gradient-bundle: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+            --accent-bio: #10b981; /* Main Green for Bundle */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -71,8 +68,8 @@
             letter-spacing: 1px;
         }
 
-        .domains-visual span.com { color: var(--accent-blue); }
-        .domains-visual span.ai { color: var(--accent-purple); }
+        .domains-visual span.com { color: #3b82f6; }
+        .domains-visual span.ai { color: #8b5cf6; }
 
         .hero-desc {
             max-width: 720px;
@@ -82,7 +79,7 @@
             font-weight: 300;
         }
 
-        /* --- Data Proof Section --- */
+        /* --- Data Proof --- */
         .data-proof {
             text-align: center;
             padding: 80px 0;
@@ -111,6 +108,7 @@
             gap: 24px;
         }
 
+        /* CARD STYLING with Dynamic Colors */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -119,44 +117,51 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            /* Default fallback color */
+            --theme-color: #fff; 
         }
 
+        /* HOVER EFFECT: Use the theme color for border and glow */
         .card:hover {
-            border-color: rgba(255,255,255,0.2);
+            border-color: var(--theme-color);
             transform: translateY(-5px);
             background: #161618;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8), 
+                        0 0 15px -5px var(--theme-color); /* Subtle glow */
         }
 
-        /* Icons & Animation Base */
+        /* Icon inherits the theme color */
         .icon-box {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: var(--accent-blue);
+            color: var(--theme-color); 
             display: inline-block;
+            transition: color 0.3s;
         }
 
         .card h3 { font-size: 1.2rem; margin-bottom: 12px; color: #fff; }
         .card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px; line-height: 1.5; }
         
+        /* Data text inherits theme color */
         .real-data {
             font-size: 0.8rem;
-            color: var(--accent-bio);
+            color: var(--theme-color);
             font-family: monospace;
             border-top: 1px solid var(--border);
             padding-top: 10px;
             display: block;
+            opacity: 0.9;
         }
 
-        /* --- Animations on Hover --- */
+        /* Animations */
         .card:hover .icon-box.spin { animation: spin 2s infinite linear; }
-        .card:hover .icon-box.pulse { animation: pulse 1s infinite; }
+        .card:hover .icon-box.pulse { animation: pulse 1.5s infinite; }
         .card:hover .icon-box.bounce { animation: bounce 1s infinite; }
         .card:hover .icon-box.shake { animation: shake 0.5s infinite; }
 
         @keyframes spin { 100% { transform: rotate(360deg); } }
-        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.2); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
         @keyframes shake { 0% { transform: translateX(0); } 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } 100% { transform: translateX(0); } }
 
         /* --- Pricing Section --- */
@@ -235,7 +240,7 @@
             border-radius: 4px;
             padding: 16px 24px;
             position: fixed;
-            z-index: 1;
+            z-index: 99;
             left: 50%;
             bottom: 30px;
             transform: translateX(-50%);
@@ -301,97 +306,108 @@
         <div class="container">
             <h3 style="margin-bottom: 50px; text-align: center; color: var(--text-muted);">12 Massive Verticals. One Defining Keyword.</h3>
             
+            <!-- 
+               COLOR CODES:
+               AI/Tech = #00f2ff (Cyan)
+               Bio/Life = #10b981 (Emerald)
+               Chem/Pharma = #d946ef (Fuchsia)
+               Medical = #3b82f6 (Royal Blue)
+               DNA/CRISPR = #f59e0b (Amber)
+               Data/Cloud = #8b5cf6 (Violet)
+               Alert/Diag = #ef4444 (Red)
+            -->
+            
             <div class="grid-container">
-                <!-- 1. Generative AI -->
-                <div class="card">
+                <!-- 1. Generative AI (Cyan) -->
+                <div class="card" style="--theme-color: #00f2ff;">
                     <i class="fa-solid fa-microchip icon-box pulse"></i>
                     <h3>Generative AI (AIDD)</h3>
                     <p>AlphaFold and DiffDock models minimize loss functions based on predicted binding affinity. It is the "score" every AI strives to optimize.</p>
                     <span class="real-data">Market: $50B CAGR 30%</span>
                 </div>
 
-                <!-- 2. Immunotherapy -->
-                <div class="card">
+                <!-- 2. Immunotherapy (Emerald) -->
+                <div class="card" style="--theme-color: #10b981;">
                     <i class="fa-solid fa-shield-virus icon-box bounce"></i>
                     <h3>CAR-T & Immunotherapy</h3>
                     <p>T-cell receptors must bind to cancer antigens with precise affinity—too low fails, too high causes toxicity. It's the safety dial.</p>
                     <span class="real-data">Citation Volume: 850k+</span>
                 </div>
 
-                <!-- 3. PROTACs -->
-                <div class="card">
+                <!-- 3. PROTACs (Fuchsia) -->
+                <div class="card" style="--theme-color: #d946ef;">
                     <i class="fa-solid fa-link icon-box spin"></i>
                     <h3>PROTACs & Glues</h3>
                     <p>Protein degraders require a "ternary complex" formation. Success is measured solely by the cooperative binding affinity of the linker.</p>
                     <span class="real-data">2025 VC Funding: $2.5B+</span>
                 </div>
 
-                <!-- 4. Antibody Engineering -->
-                <div class="card">
+                <!-- 4. Antibody Engineering (Royal Blue) -->
+                <div class="card" style="--theme-color: #3b82f6;">
                     <i class="fa-solid fa-dna icon-box pulse"></i>
                     <h3>Antibody Engineering</h3>
                     <p>"Affinity Maturation" is the standard process for developing mAbs like Humira. It is the defining characteristic of biologics.</p>
                     <span class="real-data">Top 10 Drugs: 7 are mAbs</span>
                 </div>
 
-                <!-- 5. CRISPR -->
-                <div class="card">
+                <!-- 5. CRISPR (Amber) -->
+                <div class="card" style="--theme-color: #f59e0b;">
                     <i class="fa-solid fa-scissors icon-box shake"></i>
                     <h3>CRISPR & Gene Editing</h3>
                     <p>Off-target effects happen when Cas9 binds to the wrong DNA. Measuring binding affinity is the only way to ensure patient safety.</p>
                     <span class="real-data">Keyword Freq: Very High</span>
                 </div>
 
-                <!-- 6. Virtual Screening -->
-                <div class="card">
+                <!-- 6. Virtual Screening (Sky Blue) -->
+                <div class="card" style="--theme-color: #0ea5e9;">
                     <i class="fa-solid fa-cloud icon-box pulse"></i>
                     <h3>Virtual Screening SaaS</h3>
                     <p>Cloud platforms (Schrödinger, Dock) sell one thing: calculating the binding energy (ΔG) of millions of molecules instantly.</p>
                     <span class="real-data">SaaS Value: High Recurring</span>
                 </div>
 
-                <!-- 7. DEL Libraries -->
-                <div class="card">
+                <!-- 7. DEL Libraries (Violet) -->
+                <div class="card" style="--theme-color: #8b5cf6;">
                     <i class="fa-solid fa-flask icon-box bounce"></i>
                     <h3>DNA-Encoded Libraries</h3>
                     <p>Screening billions of compounds in a single tube. The "winners" are physically selected based on their binding affinity.</p>
                     <span class="real-data">Data Scale: Billions/Test</span>
                 </div>
 
-                <!-- 8. Diagnostics -->
-                <div class="card">
+                <!-- 8. Diagnostics (Red) -->
+                <div class="card" style="--theme-color: #ef4444;">
                     <i class="fa-solid fa-vial icon-box shake"></i>
                     <h3>In-Vitro Diagnostics</h3>
                     <p>COVID-19 rapid tests and ELISA kits work because antibodies bind to the virus. Sensitivity is directly proportional to affinity.</p>
                     <span class="real-data">Global Market: $110B+</span>
                 </div>
 
-                <!-- 9. Fragment Based -->
-                <div class="card">
+                <!-- 9. Fragment Based (Teal) -->
+                <div class="card" style="--theme-color: #14b8a6;">
                     <i class="fa-solid fa-puzzle-piece icon-box spin"></i>
                     <h3>Fragment-Based Design</h3>
                     <p>FBDD identifies tiny chemical fragments with weak affinity (mM range) and grows them into potent drugs. A specialized high-value niche.</p>
                     <span class="real-data">Used in 50% of Oncology Projects</span>
                 </div>
 
-                <!-- 10. Enzyme Engineering -->
-                <div class="card">
+                <!-- 10. Enzyme Engineering (Lime) -->
+                <div class="card" style="--theme-color: #84cc16;">
                     <i class="fa-solid fa-leaf icon-box pulse"></i>
                     <h3>Biocatalysis & Enzymes</h3>
                     <p>Industrial biotech relies on enzymes. The Michaelis constant (Km) is essentially an inverse measure of substrate binding affinity.</p>
                     <span class="real-data">Green Chem Sector: Rising</span>
                 </div>
 
-                <!-- 11. Peptide Therapeutics -->
-                <div class="card">
+                <!-- 11. Peptide Therapeutics (Pink) -->
+                <div class="card" style="--theme-color: #ec4899;">
                     <i class="fa-solid fa-bacteria icon-box bounce"></i>
                     <h3>Peptide Therapeutics</h3>
                     <p>Peptides bridge the gap between small molecules and biologics. High specificity and affinity are their main selling points.</p>
                     <span class="real-data">Growth: 2x Pharma Avg</span>
                 </div>
 
-                <!-- 12. Nanomedicine -->
-                <div class="card">
+                <!-- 12. Nanomedicine (Indigo) -->
+                <div class="card" style="--theme-color: #6366f1;">
                     <i class="fa-solid fa-capsules icon-box spin"></i>
                     <h3>Nanomedicine Delivery</h3>
                     <p>Targeted nanoparticles use surface ligands to bind specific cell receptors. "Avidity" (combined affinity) determines delivery success.</p>
@@ -418,7 +434,8 @@
                         <li><i class="fa-solid fa-check" style="color:#555"></i> Enterprise Trust</li>
                         <li><i class="fa-solid fa-check" style="color:#555"></i> Global Recognition</li>
                     </ul>
-                    <a href="https://www.afternic.com/domain/bindingaffinity.com" class="btn btn-outline">Buy .com Only</a>
+                    <!-- TARGET="_BLANK" ADDED -->
+                    <a href="https://www.afternic.com/domain/bindingaffinity.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Buy .com Only</a>
                 </div>
 
                 <!-- Option 2: Bundle (Center) -->
@@ -446,7 +463,8 @@
                         <li><i class="fa-solid fa-check" style="color:#555"></i> Native AI Branding</li>
                         <li><i class="fa-solid fa-check" style="color:#555"></i> Tech Sector Standard</li>
                     </ul>
-                    <a href="https://www.afternic.com/domain/bindingaffinity.ai" class="btn btn-outline">Buy .ai Only</a>
+                    <!-- TARGET="_BLANK" ADDED -->
+                    <a href="https://www.afternic.com/domain/bindingaffinity.ai" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Buy .ai Only</a>
                 </div>
 
             </div>
@@ -477,7 +495,6 @@
                 x.className = "toast show";
                 setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
                 
-                // Optional: delay open mailto
                 setTimeout(() => {
                      window.location.href = "mailto:" + email + "?subject=BindingAffinity%20Bundle%20Inquiry";
                 }, 800);
