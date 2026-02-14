@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BindingAffinity | The Molecular Currency of the AI Era</title>
     <meta name="description" content="Acquire the definitive digital asset portfolio for AI Drug Discovery: BindingAffinity.com + BindingAffinity.ai.">
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +21,11 @@
             --text-muted: #94a3b8;
             --border: rgba(255,255,255,0.08);
             --accent-bio: #10b981; /* Main Green for Bundle */
+            --success: #10b981;
+            --error: #ef4444;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             background-color: var(--bg-body);
             color: var(--text-main);
@@ -36,7 +36,6 @@
 
         h1, h2, h3, .price-font { font-family: 'Space Grotesk', sans-serif; }
         a { text-decoration: none; color: inherit; }
-
         .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
         
         /* --- Hero --- */
@@ -49,7 +48,6 @@
             text-align: center;
             background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
         }
-
         .asset-title {
             font-size: clamp(3.5rem, 9vw, 6.5rem);
             font-weight: 700;
@@ -59,7 +57,6 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
         }
-
         .domains-visual {
             font-family: 'Space Grotesk';
             font-size: 1.5rem;
@@ -67,10 +64,8 @@
             margin-bottom: 40px;
             letter-spacing: 1px;
         }
-
         .domains-visual span.com { color: #3b82f6; }
         .domains-visual span.ai { color: #8b5cf6; }
-
         .hero-desc {
             max-width: 720px;
             font-size: 1.25rem;
@@ -86,7 +81,6 @@
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
-
         .data-proof h2 { font-size: 2.5rem; margin-bottom: 20px; }
         .citation-box {
             display: inline-flex;
@@ -101,14 +95,12 @@
 
         /* --- 12 Grid System --- */
         .grid-section { padding: 100px 0; }
-        
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
-
-        /* CARD STYLING with Dynamic Colors */
+        /* CARD STYLING */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -117,20 +109,14 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            /* Default fallback color */
             --theme-color: #fff; 
         }
-
-        /* HOVER EFFECT: Use the theme color for border and glow */
         .card:hover {
             border-color: var(--theme-color);
             transform: translateY(-5px);
             background: #161618;
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8), 
-                        0 0 15px -5px var(--theme-color); /* Subtle glow */
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8), 0 0 15px -5px var(--theme-color);
         }
-
-        /* Icon inherits the theme color */
         .icon-box {
             font-size: 1.8rem;
             margin-bottom: 20px;
@@ -138,11 +124,8 @@
             display: inline-block;
             transition: color 0.3s;
         }
-
         .card h3 { font-size: 1.2rem; margin-bottom: 12px; color: #fff; }
         .card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px; line-height: 1.5; }
-        
-        /* Data text inherits theme color */
         .real-data {
             font-size: 0.8rem;
             color: var(--theme-color);
@@ -152,13 +135,11 @@
             display: block;
             opacity: 0.9;
         }
-
         /* Animations */
         .card:hover .icon-box.spin { animation: spin 2s infinite linear; }
         .card:hover .icon-box.pulse { animation: pulse 1.5s infinite; }
         .card:hover .icon-box.bounce { animation: bounce 1s infinite; }
         .card:hover .icon-box.shake { animation: shake 0.5s infinite; }
-
         @keyframes spin { 100% { transform: rotate(360deg); } }
         @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
@@ -172,7 +153,6 @@
             gap: 30px;
             align-items: center;
         }
-
         .price-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -180,7 +160,6 @@
             border-radius: 12px;
             text-align: center;
         }
-
         .price-card.bundle {
             background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, #0f1011 100%);
             border: 1px solid var(--accent-bio);
@@ -188,7 +167,6 @@
             position: relative;
             z-index: 2;
         }
-
         .badge {
             background: var(--accent-bio);
             color: #000;
@@ -202,49 +180,77 @@
             left: 50%;
             transform: translateX(-50%);
         }
-
         .price-amount { font-size: 2.5rem; font-weight: 700; margin: 20px 0 5px; color: #fff; }
         .installment { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; }
         .btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            border-radius: 6px;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: all 0.2s;
+            display: block; width: 100%; padding: 15px;
+            border-radius: 6px; font-weight: 600;
+            margin-top: 20px; transition: all 0.2s;
+            cursor: pointer; border: none; font-family: inherit;
         }
-        .btn-outline { border: 1px solid var(--border); color: #fff; }
+        .btn-outline { border: 1px solid var(--border); color: #fff; background: transparent; }
         .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
         .btn-primary { background: var(--accent-bio); color: #000; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
         .btn-primary:hover { background: #34d399; }
 
+        /* --- Offer Form (New) --- */
+        .offer-section {
+            padding: 60px 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .offer-card {
+            background: #0f1011;
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--accent-bio);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .offer-header h3 { font-size: 1.5rem; margin-bottom: 5px; }
+        .offer-header p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-input {
+            width: 100%;
+            padding: 14px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-input:focus { outline: none; border-color: var(--accent-bio); background: rgba(16, 185, 129, 0.05); }
+        
+        .btn-submit {
+            width: 100%; background: #1f2937; color: #fff;
+            padding: 14px; border: 1px solid #374151;
+            border-radius: 6px; font-weight: 600; cursor: pointer;
+            transition: 0.3s; text-transform: uppercase;
+        }
+        .btn-submit:hover { background: var(--accent-bio); color: #000; border-color: var(--accent-bio); }
+        
+        #form-status { margin-top: 15px; font-size: 0.9rem; display: none; }
+        .status-success { color: var(--success); }
+        .status-error { color: var(--error); }
+
+
         /* --- Contact --- */
-        .contact-section { padding: 80px 0; text-align: center; }
+        .contact-section { padding: 40px 0 80px; text-align: center; }
         .copy-email {
-            font-size: 1.5rem;
-            font-weight: 700;
-            cursor: pointer;
+            font-size: 1.5rem; font-weight: 700; cursor: pointer;
             border-bottom: 2px solid var(--accent-bio);
-            padding-bottom: 5px;
-            transition: color 0.3s;
+            padding-bottom: 5px; transition: color 0.3s;
         }
         .copy-email:hover { color: var(--accent-bio); }
 
         /* Toast */
         .toast {
-            visibility: hidden;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 4px;
-            padding: 16px 24px;
-            position: fixed;
-            z-index: 99;
-            left: 50%;
-            bottom: 30px;
-            transform: translateX(-50%);
-            border: 1px solid var(--accent-bio);
+            visibility: hidden; background-color: #333; color: #fff;
+            text-align: center; border-radius: 4px; padding: 16px 24px;
+            position: fixed; z-index: 99; left: 50%; bottom: 30px;
+            transform: translateX(-50%); border: 1px solid var(--accent-bio);
         }
         .toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
         @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
@@ -260,7 +266,6 @@
     </style>
 </head>
 <body>
-
     <!-- HERO -->
     <section class="hero">
         <div class="container">
@@ -283,20 +288,10 @@
         <div class="container">
             <h2>The Science of Value</h2>
             <p style="color: var(--text-muted);">"Binding Affinity" is not just a word. It is the gatekeeper of FDA approval.</p>
-            
             <div class="citation-box">
-                <div class="stat-item">
-                    <span class="stat-num">5.2M+</span>
-                    <span class="stat-label">Google Scholar Citations</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">140k+</span>
-                    <span class="stat-label">Mentions in Nature/Science</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">100%</span>
-                    <span class="stat-label">Relevance to Pharma</span>
-                </div>
+                <div class="stat-item"><span class="stat-num">5.2M+</span><span class="stat-label">Google Scholar Citations</span></div>
+                <div class="stat-item"><span class="stat-num">140k+</span><span class="stat-label">Mentions in Nature/Science</span></div>
+                <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Relevance to Pharma</span></div>
             </div>
         </div>
     </section>
@@ -306,17 +301,6 @@
         <div class="container">
             <h3 style="margin-bottom: 50px; text-align: center; color: var(--text-muted);">12 Massive Verticals. One Defining Keyword.</h3>
             
-            <!-- 
-               COLOR CODES:
-               AI/Tech = #00f2ff (Cyan)
-               Bio/Life = #10b981 (Emerald)
-               Chem/Pharma = #d946ef (Fuchsia)
-               Medical = #3b82f6 (Royal Blue)
-               DNA/CRISPR = #f59e0b (Amber)
-               Data/Cloud = #8b5cf6 (Violet)
-               Alert/Diag = #ef4444 (Red)
-            -->
-            
             <div class="grid-container">
                 <!-- 1. Generative AI (Cyan) -->
                 <div class="card" style="--theme-color: #00f2ff;">
@@ -325,7 +309,6 @@
                     <p>AlphaFold and DiffDock models minimize loss functions based on predicted binding affinity. It is the "score" every AI strives to optimize.</p>
                     <span class="real-data">Market: $50B CAGR 30%</span>
                 </div>
-
                 <!-- 2. Immunotherapy (Emerald) -->
                 <div class="card" style="--theme-color: #10b981;">
                     <i class="fa-solid fa-shield-virus icon-box bounce"></i>
@@ -333,7 +316,6 @@
                     <p>T-cell receptors must bind to cancer antigens with precise affinity—too low fails, too high causes toxicity. It's the safety dial.</p>
                     <span class="real-data">Citation Volume: 850k+</span>
                 </div>
-
                 <!-- 3. PROTACs (Fuchsia) -->
                 <div class="card" style="--theme-color: #d946ef;">
                     <i class="fa-solid fa-link icon-box spin"></i>
@@ -341,7 +323,6 @@
                     <p>Protein degraders require a "ternary complex" formation. Success is measured solely by the cooperative binding affinity of the linker.</p>
                     <span class="real-data">2025 VC Funding: $2.5B+</span>
                 </div>
-
                 <!-- 4. Antibody Engineering (Royal Blue) -->
                 <div class="card" style="--theme-color: #3b82f6;">
                     <i class="fa-solid fa-dna icon-box pulse"></i>
@@ -349,7 +330,6 @@
                     <p>"Affinity Maturation" is the standard process for developing mAbs like Humira. It is the defining characteristic of biologics.</p>
                     <span class="real-data">Top 10 Drugs: 7 are mAbs</span>
                 </div>
-
                 <!-- 5. CRISPR (Amber) -->
                 <div class="card" style="--theme-color: #f59e0b;">
                     <i class="fa-solid fa-scissors icon-box shake"></i>
@@ -357,7 +337,6 @@
                     <p>Off-target effects happen when Cas9 binds to the wrong DNA. Measuring binding affinity is the only way to ensure patient safety.</p>
                     <span class="real-data">Keyword Freq: Very High</span>
                 </div>
-
                 <!-- 6. Virtual Screening (Sky Blue) -->
                 <div class="card" style="--theme-color: #0ea5e9;">
                     <i class="fa-solid fa-cloud icon-box pulse"></i>
@@ -365,7 +344,6 @@
                     <p>Cloud platforms (Schrödinger, Dock) sell one thing: calculating the binding energy (ΔG) of millions of molecules instantly.</p>
                     <span class="real-data">SaaS Value: High Recurring</span>
                 </div>
-
                 <!-- 7. DEL Libraries (Violet) -->
                 <div class="card" style="--theme-color: #8b5cf6;">
                     <i class="fa-solid fa-flask icon-box bounce"></i>
@@ -373,7 +351,6 @@
                     <p>Screening billions of compounds in a single tube. The "winners" are physically selected based on their binding affinity.</p>
                     <span class="real-data">Data Scale: Billions/Test</span>
                 </div>
-
                 <!-- 8. Diagnostics (Red) -->
                 <div class="card" style="--theme-color: #ef4444;">
                     <i class="fa-solid fa-vial icon-box shake"></i>
@@ -381,7 +358,6 @@
                     <p>COVID-19 rapid tests and ELISA kits work because antibodies bind to the virus. Sensitivity is directly proportional to affinity.</p>
                     <span class="real-data">Global Market: $110B+</span>
                 </div>
-
                 <!-- 9. Fragment Based (Teal) -->
                 <div class="card" style="--theme-color: #14b8a6;">
                     <i class="fa-solid fa-puzzle-piece icon-box spin"></i>
@@ -389,7 +365,6 @@
                     <p>FBDD identifies tiny chemical fragments with weak affinity (mM range) and grows them into potent drugs. A specialized high-value niche.</p>
                     <span class="real-data">Used in 50% of Oncology Projects</span>
                 </div>
-
                 <!-- 10. Enzyme Engineering (Lime) -->
                 <div class="card" style="--theme-color: #84cc16;">
                     <i class="fa-solid fa-leaf icon-box pulse"></i>
@@ -397,7 +372,6 @@
                     <p>Industrial biotech relies on enzymes. The Michaelis constant (Km) is essentially an inverse measure of substrate binding affinity.</p>
                     <span class="real-data">Green Chem Sector: Rising</span>
                 </div>
-
                 <!-- 11. Peptide Therapeutics (Pink) -->
                 <div class="card" style="--theme-color: #ec4899;">
                     <i class="fa-solid fa-bacteria icon-box bounce"></i>
@@ -405,7 +379,6 @@
                     <p>Peptides bridge the gap between small molecules and biologics. High specificity and affinity are their main selling points.</p>
                     <span class="real-data">Growth: 2x Pharma Avg</span>
                 </div>
-
                 <!-- 12. Nanomedicine (Indigo) -->
                 <div class="card" style="--theme-color: #6366f1;">
                     <i class="fa-solid fa-capsules icon-box spin"></i>
@@ -423,7 +396,6 @@
             <h2 style="text-align: center; margin-bottom: 60px;">Acquisition Options</h2>
             
             <div class="pricing-grid">
-                
                 <!-- Option 1: .com -->
                 <div class="price-card">
                     <h3>BindingAffinity.com</h3>
@@ -434,10 +406,8 @@
                         <li><i class="fa-solid fa-check" style="color:#555"></i> Enterprise Trust</li>
                         <li><i class="fa-solid fa-check" style="color:#555"></i> Global Recognition</li>
                     </ul>
-                    <!-- TARGET="_BLANK" ADDED -->
                     <a href="https://www.afternic.com/domain/bindingaffinity.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Buy .com Only</a>
                 </div>
-
                 <!-- Option 2: Bundle (Center) -->
                 <div class="price-card bundle">
                     <div class="badge">Most Recommended</div>
@@ -452,7 +422,6 @@
                     </ul>
                     <button class="btn btn-primary" onclick="copyEmail()">Contact for Bundle</button>
                 </div>
-
                 <!-- Option 3: .ai -->
                 <div class="price-card">
                     <h3>BindingAffinity.ai</h3>
@@ -463,21 +432,44 @@
                         <li><i class="fa-solid fa-check" style="color:#555"></i> Native AI Branding</li>
                         <li><i class="fa-solid fa-check" style="color:#555"></i> Tech Sector Standard</li>
                     </ul>
-                    <!-- TARGET="_BLANK" ADDED -->
                     <a href="https://www.afternic.com/domain/bindingaffinity.ai" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Buy .ai Only</a>
                 </div>
-
             </div>
+        </div>
+    </section>
+
+    <!-- OFFER FORM SECTION (NEW) -->
+    <section class="offer-section">
+        <div class="offer-card">
+            <div class="offer-header">
+                <h3>Submit Valuation Proposal</h3>
+                <p>Institutional offers and strategic acquisition proposals are welcome.</p>
+            </div>
+            
+            <form id="offerForm" action="https://formsubmit.co/joshua369x@gmail.com" method="POST">
+                <!-- Config -->
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Valuation Proposal for BindingAffinity">
+
+                <div class="form-group">
+                    <input type="number" name="amount" class="form-input" placeholder="Proposal Amount (USD)" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-input" placeholder="Corporate/Institutional Email" required>
+                </div>
+                <button type="submit" class="btn-submit">Submit Proposal</button>
+            </form>
+            <div id="form-status"></div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <section class="contact-section">
         <div class="container">
-            <p style="margin-bottom: 15px; color: var(--text-muted);">Ready to secure the asset?</p>
+            <p style="margin-bottom: 15px; color: var(--text-muted);">Direct Inquiry</p>
             <div class="copy-email" onclick="copyEmail()">joshua369x@gmail.com</div>
             <p style="margin-top: 10px; font-size: 0.85rem; color: #444;">Click to copy address</p>
-
             <p class="disclaimer">
                 DISCLAIMER: "BINDING AFFINITY" IS A SCIENTIFIC TERM. ACQUISITION OF THESE DOMAINS GRANTS EXCLUSIVE CONTROL OVER THE DIGITAL ASSETS (BINDINGAFFINITY.COM/.AI) BUT DOES NOT IMPLY INTELLECTUAL PROPERTY OWNERSHIP OF THE SCIENTIFIC CONCEPT ITSELF.
             </p>
@@ -494,10 +486,50 @@
                 var x = document.getElementById("toast");
                 x.className = "toast show";
                 setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            });
+        }
+
+        // AJAX Offer Form
+        const form = document.getElementById('offerForm');
+        const statusDiv = document.getElementById('form-status');
+
+        if(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = form.querySelector('.btn-submit');
+                const originalText = btn.innerHTML;
                 
-                setTimeout(() => {
-                     window.location.href = "mailto:" + email + "?subject=BindingAffinity%20Bundle%20Inquiry";
-                }, 800);
+                btn.innerHTML = "Submitting...";
+                btn.disabled = true;
+
+                const formData = new FormData(form);
+                
+                let actionUrl = form.action;
+                if(!actionUrl.includes('/ajax/')) {
+                    actionUrl = actionUrl.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+                }
+
+                fetch(actionUrl, { method: "POST", body: formData })
+                .then(response => response.json())
+                .then(data => {
+                    statusDiv.innerText = "✓ Proposal Submitted Successfully.";
+                    statusDiv.className = "status-success";
+                    statusDiv.style.display = "block";
+                    form.reset();
+                    btn.innerHTML = "Submitted";
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                        statusDiv.style.display = "none";
+                    }, 3000);
+                })
+                .catch(error => {
+                    statusDiv.innerText = "Submission Error. Please contact via email directly.";
+                    statusDiv.className = "status-error";
+                    statusDiv.style.display = "block";
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                });
             });
         }
     </script>
