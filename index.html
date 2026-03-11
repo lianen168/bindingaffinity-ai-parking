@@ -1,535 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BindingAffinity | The Molecular Currency of the AI Era</title>
-    <meta name="description" content="Acquire the definitive digital asset portfolio for AI Drug Discovery: BindingAffinity.com + BindingAffinity.ai.">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BindingAffinity.AI — The Molecular Currency of the AI Era. AI-powered binding affinity prediction platform for pharmaceutical drug discovery.">
+  <title>BindingAffinity.AI | The Molecular Currency of the AI Era</title>
 
-    <!-- SEO: JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "BindingAffinity Domain Portfolio",
-      "description": "The definitive digital asset portfolio for AI Drug Discovery, including the premium domain names BindingAffinity.com and BindingAffinity.ai.",
-      "brand": {
-        "@type": "Brand",
-        "name": "BindingAffinity"
-      },
-      "sku": "BA-BUNDLE-01",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "The Monopoly Bundle (.com + .ai)",
-          "price": "25000",
-          "priceCurrency": "USD",
-          "description": "Acquire both BindingAffinity.com and BindingAffinity.ai for complete brand protection and market dominance. Save $5,000.",
-          "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "Organization",
-            "name": "Domain Seller"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "BindingAffinity.com",
-          "price": "15000",
-          "priceCurrency": "USD",
-          "description": "The commercial authority domain, perfect for enterprise trust and global recognition.",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.afternic.com/domain/bindingaffinity.com"
-        },
-        {
-          "@type": "Offer",
-          "name": "BindingAffinity.ai",
-          "price": "15000",
-          "priceCurrency": "USD",
-          "description": "The technology-focused domain, ideal for native AI branding and the tech sector standard.",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.afternic.com/domain/bindingaffinity.ai"
-        }
-      ]
-    }
-    </script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JL1NEVXLMD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JL1NEVXLMD');
+  </script>
 
-    <style>
-        :root {
-            --bg-body: #050505;
-            --bg-card: #0f1011;
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --border: rgba(255,255,255,0.08);
-            --accent-bio: #10b981; /* Main Green for Bundle */
-            --success: #10b981;
-            --error: #ef4444;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        h1, h2, h3, .price-font { font-family: 'Space Grotesk', sans-serif; }
-        a { text-decoration: none; color: inherit; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        
-        /* --- Hero --- */
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
-        }
-        .asset-title {
-            font-size: clamp(3.5rem, 9vw, 6.5rem);
-            font-weight: 700;
-            letter-spacing: -0.04em;
-            background: linear-gradient(180deg, #fff 20%, #64748b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-        .domains-visual {
-            font-family: 'Space Grotesk';
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            letter-spacing: 1px;
-        }
-        .domains-visual span.com { color: #3b82f6; }
-        .domains-visual span.ai { color: #8b5cf6; }
-        .hero-desc {
-            max-width: 720px;
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 50px;
-            font-weight: 300;
-        }
-        /* --- Data Proof --- */
-        .data-proof {
-            text-align: center;
-            padding: 80px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-        .data-proof h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .citation-box {
-            display: inline-flex;
-            gap: 40px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .stat-item { text-align: left; border-left: 2px solid var(--accent-bio); padding-left: 15px; }
-        .stat-num { display: block; font-size: 2rem; font-weight: 700; color: #fff; }
-        .stat-label { font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
-        /* --- 12 Grid System --- */
-        .grid-section { padding: 100px 0; }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        /* CARD STYLING */
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            padding: 32px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            --theme-color: #fff; 
-        }
-        .card:hover {
-            border-color: var(--theme-color);
-            transform: translateY(-5px);
-            background: #161618;
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8), 0 0 15px -5px var(--theme-color);
-        }
-        .icon-box {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--theme-color); 
-            display: inline-block;
-            transition: color 0.3s;
-        }
-        .card h3 { font-size: 1.2rem; margin-bottom: 12px; color: #fff; }
-        .card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px; line-height: 1.5; }
-        .real-data {
-            font-size: 0.8rem;
-            color: var(--theme-color);
-            font-family: monospace;
-            border-top: 1px solid var(--border);
-            padding-top: 10px;
-            display: block;
-            opacity: 0.9;
-        }
-        /* Animations */
-        .card:hover .icon-box.spin { animation: spin 2s infinite linear; }
-        .card:hover .icon-box.pulse { animation: pulse 1.5s infinite; }
-        .card:hover .icon-box.bounce { animation: bounce 1s infinite; }
-        .card:hover .icon-box.shake { animation: shake 0.5s infinite; }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-        @keyframes shake { 0% { transform: translateX(0); } 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } 100% { transform: translateX(0); } }
-        /* --- Pricing Section --- */
-        .pricing-section { padding: 100px 0; background: #0a0a0a; }
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            align-items: center;
-        }
-        .price-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        .price-card.bundle {
-            background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, #0f1011 100%);
-            border: 1px solid var(--accent-bio);
-            transform: scale(1.05);
-            position: relative;
-            z-index: 2;
-        }
-        .badge {
-            background: var(--accent-bio);
-            color: #000;
-            padding: 6px 12px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            border-radius: 20px;
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .price-amount { font-size: 2.5rem; font-weight: 700; margin: 20px 0 5px; color: #fff; }
-        .installment { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; }
-        .btn {
-            display: block; width: 100%; padding: 15px;
-            border-radius: 6px; font-weight: 600;
-            margin-top: 20px; transition: all 0.2s;
-            cursor: pointer; border: none; font-family: inherit;
-        }
-        .btn-outline { border: 1px solid var(--border); color: #fff; background: transparent; }
-        .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
-        .btn-primary { background: var(--accent-bio); color: #000; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
-        .btn-primary:hover { background: #34d399; }
-        /* --- Offer Form --- */
-        .offer-section {
-            padding: 60px 0;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .offer-card {
-            background: #0f1011;
-            border: 1px solid var(--border);
-            border-top: 3px solid var(--accent-bio);
-            padding: 40px;
-            border-radius: 8px;
-        }
-        .offer-header h3 { font-size: 1.5rem; margin-bottom: 5px; }
-        .offer-header p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px; }
-        
-        .form-group { margin-bottom: 20px; }
-        .form-input {
-            width: 100%;
-            padding: 14px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 6px;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: 0.3s;
-        }
-        .form-input:focus { outline: none; border-color: var(--accent-bio); background: rgba(16, 185, 129, 0.05); }
-        
-        .btn-submit {
-            width: 100%; background: #1f2937; color: #fff;
-            padding: 14px; border: 1px solid #374151;
-            border-radius: 6px; font-weight: 600; cursor: pointer;
-            transition: 0.3s; text-transform: uppercase;
-        }
-        .btn-submit:hover:not(:disabled) { background: var(--accent-bio); color: #000; border-color: var(--accent-bio); }
-        .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-        
-        #form-status { margin-top: 20px; padding: 10px; border-left: 3px solid; font-size: 0.9rem; display: none; }
-        .status-success { color: var(--success); border-color: var(--success); background-color: rgba(16, 185, 129, 0.05); }
-        .status-error { color: var(--error); border-color: var(--error); background-color: rgba(239, 68, 68, 0.05); }
+  <!-- Contentsquare / Hotjar Tracking -->
+  <script src="https://t.contentsquare.net/uxa/c0fdd5da14f5e.js"></script>
 
-        /* --- Contact & Footer --- */
-        .contact-section { padding: 40px 0 80px; text-align: center; }
-        .copy-email {
-            font-size: 1.5rem; font-weight: 700; cursor: pointer;
-            border-bottom: 2px solid var(--accent-bio);
-            padding-bottom: 5px; transition: color 0.3s;
-        }
-        .copy-email:hover { color: var(--accent-bio); }
-        .disclaimer { font-size: 0.7rem; color: #444; max-width: 800px; margin: 40px auto 0; text-transform: uppercase; }
-        
-        /* --- Toast --- */
-        .toast {
-            visibility: hidden; background-color: #333; color: #fff;
-            text-align: center; border-radius: 4px; padding: 16px 24px;
-            position: fixed; z-index: 99; left: 50%; bottom: 30px;
-            transform: translateX(-50%); border: 1px solid var(--accent-bio);
-        }
-        .toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
-        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
-        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
-        
-        @media (max-width: 768px) {
-            .asset-title { font-size: 3rem; }
-            .price-card.bundle { transform: scale(1); margin: 30px 0; }
-        }
-    </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; }
+    .neon-cyan { text-shadow: 0 0 25px #00f5ff, 0 0 50px #00f5ff; }
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.12); }
+  </style>
 </head>
-<body>
+<body class="bg-[#0a0a0a] text-white min-h-screen relative">
 
-    <!-- SEO: Main content wrapper -->
-    <main>
-        <!-- HERO -->
-        <section class="hero">
-            <div class="container">
-                <h1 class="asset-title">BindingAffinity</h1>
-                <div class="domains-visual">
-                    <span class="com">.com</span> &nbsp;|&nbsp; <span class="ai">.ai</span>
-                </div>
-                <p class="hero-desc">
-                    The most cited metric in molecular biology. <br>
-                    The fundamental variable in the $300B AI Drug Discovery equation.
-                </p>
-                <a href="#pricing" class="btn-outline" style="display:inline-block; width:auto; padding: 12px 30px; border-radius:30px;">
-                    View Valuation & Assets <i class="fa-solid fa-arrow-down"></i>
-                </a>
-            </div>
-        </section>
+  <!-- Three.js Background (与Conformation.AI完全一致) -->
+  <canvas id="threeCanvas" class="fixed inset-0 z-0 opacity-75"></canvas>
 
-        <!-- DATA PROOF -->
-        <section class="data-proof">
-            <div class="container">
-                <h2>The Science of Value</h2>
-                <p style="color: var(--text-muted);">"Binding Affinity" is not just a word. It is the gatekeeper of FDA approval.</p>
-                <div class="citation-box">
-                    <div class="stat-item"><span class="stat-num">5.2M+</span><span class="stat-label">Google Scholar Citations</span></div>
-                    <div class="stat-item"><span class="stat-num">140k+</span><span class="stat-label">Mentions in Nature/Science</span></div>
-                    <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Relevance to Pharma</span></div>
-                </div>
-            </div>
-        </section>
+  <!-- Navbar (完全一致) -->
+  <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-xs md:text-sm">
+      <div class="text-3xl font-bold tracking-tighter neon-cyan">BindingAffinity<span class="text-[#00f5ff]">.AI</span></div>
+      <div class="flex items-center gap-3 md:gap-8 font-medium">
+        <a href="#demo" class="hover:text-cyan-400">Demo</a>
+        <a href="#pillars" class="hover:text-cyan-400">12 Pillars</a>
+        <a href="#future" class="hover:text-cyan-400">Future Vision</a>
+      </div>
+    </div>
+  </nav>
 
-        <!-- 12 GRID SECTION -->
-        <section class="grid-section">
-            <div class="container">
-                <h3 style="margin-bottom: 50px; text-align: center; color: var(--text-muted);">12 Massive Verticals. One Defining Keyword.</h3>
-                <div class="grid-container">
-                    <!-- Cards 1-12 (Content Unchanged) -->
-                    <div class="card" style="--theme-color: #00f2ff;"><i class="fa-solid fa-microchip icon-box pulse"></i><h3>Generative AI (AIDD)</h3><p>AlphaFold and DiffDock models minimize loss functions based on predicted binding affinity. It is the "score" every AI strives to optimize.</p><span class="real-data">Market: $50B CAGR 30%</span></div>
-                    <div class="card" style="--theme-color: #10b981;"><i class="fa-solid fa-shield-virus icon-box bounce"></i><h3>CAR-T & Immunotherapy</h3><p>T-cell receptors must bind to cancer antigens with precise affinity—too low fails, too high causes toxicity. It's the safety dial.</p><span class="real-data">Citation Volume: 850k+</span></div>
-                    <div class="card" style="--theme-color: #d946ef;"><i class="fa-solid fa-link icon-box spin"></i><h3>PROTACs & Glues</h3><p>Protein degraders require a "ternary complex" formation. Success is measured solely by the cooperative binding affinity of the linker.</p><span class="real-data">2025 VC Funding: $2.5B+</span></div>
-                    <div class="card" style="--theme-color: #3b82f6;"><i class="fa-solid fa-dna icon-box pulse"></i><h3>Antibody Engineering</h3><p>"Affinity Maturation" is the standard process for developing mAbs like Humira. It is the defining characteristic of biologics.</p><span class="real-data">Top 10 Drugs: 7 are mAbs</span></div>
-                    <div class="card" style="--theme-color: #f59e0b;"><i class="fa-solid fa-scissors icon-box shake"></i><h3>CRISPR & Gene Editing</h3><p>Off-target effects happen when Cas9 binds to the wrong DNA. Measuring binding affinity is the only way to ensure patient safety.</p><span class="real-data">Keyword Freq: Very High</span></div>
-                    <div class="card" style="--theme-color: #0ea5e9;"><i class="fa-solid fa-cloud icon-box pulse"></i><h3>Virtual Screening SaaS</h3><p>Cloud platforms (Schrödinger, Dock) sell one thing: calculating the binding energy (ΔG) of millions of molecules instantly.</p><span class="real-data">SaaS Value: High Recurring</span></div>
-                    <div class="card" style="--theme-color: #8b5cf6;"><i class="fa-solid fa-flask icon-box bounce"></i><h3>DNA-Encoded Libraries</h3><p>Screening billions of compounds in a single tube. The "winners" are physically selected based on their binding affinity.</p><span class="real-data">Data Scale: Billions/Test</span></div>
-                    <div class="card" style="--theme-color: #ef4444;"><i class="fa-solid fa-vial icon-box shake"></i><h3>In-Vitro Diagnostics</h3><p>COVID-19 rapid tests and ELISA kits work because antibodies bind to the virus. Sensitivity is directly proportional to affinity.</p><span class="real-data">Global Market: $110B+</span></div>
-                    <div class="card" style="--theme-color: #14b8a6;"><i class="fa-solid fa-puzzle-piece icon-box spin"></i><h3>Fragment-Based Design</h3><p>FBDD identifies tiny chemical fragments with weak affinity (mM range) and grows them into potent drugs. A specialized high-value niche.</p><span class="real-data">Used in 50% of Oncology Projects</span></div>
-                    <div class="card" style="--theme-color: #84cc16;"><i class="fa-solid fa-leaf icon-box pulse"></i><h3>Biocatalysis & Enzymes</h3><p>Industrial biotech relies on enzymes. The Michaelis constant (Km) is essentially an inverse measure of substrate binding affinity.</p><span class="real-data">Green Chem Sector: Rising</span></div>
-                    <div class="card" style="--theme-color: #ec4899;"><i class="fa-solid fa-bacteria icon-box bounce"></i><h3>Peptide Therapeutics</h3><p>Peptides bridge the gap between small molecules and biologics. High specificity and affinity are their main selling points.</p><span class="real-data">Growth: 2x Pharma Avg</span></div>
-                    <div class="card" style="--theme-color: #6366f1;"><i class="fa-solid fa-capsules icon-box spin"></i><h3>Nanomedicine Delivery</h3><p>Targeted nanoparticles use surface ligands to bind specific cell receptors. "Avidity" (combined affinity) determines delivery success.</p><span class="real-data">Future Tech: RNA Delivery</span></div>
-                </div>
-            </div>
-        </section>
+  <!-- Hero -->
+  <header class="min-h-screen flex items-center relative z-10 pt-16 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-black tracking-tighter neon-cyan mb-6">The Molecular Currency of the AI Era</h1>
+      <p class="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto">BindingAffinity.AI — AI-powered binding affinity prediction for pharmaceutical drug discovery. The score every AI drug design model optimizes.</p>
+      <button onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})" 
+              class="mt-12 w-full max-w-xs mx-auto bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-cyan-300 hover:to-purple-400 text-black font-bold text-xl md:text-2xl px-10 py-6 rounded-3xl transition-all">
+        Experience AI Binding Affinity Prediction
+      </button>
+    </div>
+  </header>
 
-        <!-- PRICING SECTION -->
-        <section id="pricing" class="pricing-section">
-            <div class="container">
-                <h2 style="text-align: center; margin-bottom: 60px;">Acquisition Options</h2>
-                <div class="pricing-grid">
-                    <!-- Option 1: .com -->
-                    <div class="price-card">
-                        <h3>BindingAffinity.com</h3>
-                        <p style="color: var(--text-muted);">The Commercial Authority</p>
-                        <div class="price-amount">$15,000</div>
-                        <div class="installment">or ~$1,250/mo (12 months)</div>
-                        <ul style="list-style: none; text-align: left; margin: 20px 0; color: #ccc; font-size: 0.9rem; padding-left: 10px;">
-                            <li><i class="fa-solid fa-check" style="color:#555; margin-right: 8px;"></i>Enterprise Trust</li>
-                            <li style="margin-top: 5px;"><i class="fa-solid fa-check" style="color:#555; margin-right: 8px;"></i>Global Recognition</li>
-                        </ul>
-                        <a href="https://www.afternic.com/domain/bindingaffinity.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Buy .com Only</a>
-                    </div>
-                    <!-- Option 2: Bundle (Center) -->
-                    <div class="price-card bundle">
-                        <div class="badge">Most Recommended</div>
-                        <h3>The Monopoly Bundle</h3>
-                        <p style="color: var(--text-muted);">Total Market Dominance</p>
-                        <div class="price-amount" style="color: var(--accent-bio);">$25,000</div>
-                        <div class="installment">or ~$2,083/mo (12 months)</div>
-                        <ul style="list-style: none; text-align: left; margin: 20px 0; color: #fff; font-size: 0.9rem; padding-left: 10px;">
-                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-star" style="color:var(--accent-bio); margin-right: 8px;"></i><strong>Includes .com + .ai</strong></li>
-                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent-bio); margin-right: 8px;"></i>Save $5,000 Instantly</li>
-                            <li><i class="fa-solid fa-lock" style="color:var(--accent-bio); margin-right: 8px;"></i>Complete Brand Protection</li>
-                        </ul>
-                        <button class="btn btn-primary" onclick="copyEmail()">Contact for Bundle</button>
-                    </div>
-                    <!-- Option 3: .ai -->
-                    <div class="price-card">
-                        <h3>BindingAffinity.ai</h3>
-                        <p style="color: var(--text-muted);">The Tech Future</p>
-                        <div class="price-amount">$15,000</div>
-                        <div class="installment">or ~$1,250/mo (12 months)</div>
-                        <ul style="list-style: none; text-align: left; margin: 20px 0; color: #ccc; font-size: 0.9rem; padding-left: 10px;">
-                            <li><i class="fa-solid fa-check" style="color:#555; margin-right: 8px;"></i>Native AI Branding</li>
-                            <li style="margin-top: 5px;"><i class="fa-solid fa-check" style="color:#555; margin-right: 8px;"></i>Tech Sector Standard</li>
-                        </ul>
-                        <a href="https://www.afternic.com/domain/bindingaffinity.ai" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Buy .ai Only</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- AI Demo (分子对接 + 亲和力预测) -->
+  <section id="demo" class="py-20 md:py-32 bg-black/70 relative z-10 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">AI Binding Affinity Predictor</h2>
+      <p class="text-center text-lg text-gray-400 mb-10">Select a target → Run AI docking → Get predicted Kd / Ki in seconds</p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass p-8 rounded-3xl">
+          <select id="pdbSelect" class="w-full bg-black/60 border border-cyan-400/30 rounded-2xl p-5 text-base focus:border-cyan-400">
+            <option value="1M14">EGFR Kinase Domain (Cancer)</option>
+            <option value="6VYB">SARS-CoV-2 Spike (Antiviral)</option>
+            <option value="7KRR">BRD4 Bromodomain (Cancer)</option>
+            <option value="6LZG">ACE2 Receptor (Cardio)</option>
+          </select>
+          <button onclick="runAIPrediction()" class="mt-8 w-full bg-gradient-to-r from-emerald-400 to-cyan-400 text-black py-7 text-xl font-bold rounded-3xl hover:scale-105 transition">🚀 Run AI Affinity Prediction (2s)</button>
+        </div>
 
-        <!-- OFFER FORM SECTION -->
-        <section class="offer-section">
-            <div class="offer-card">
-                <div class="offer-header">
-                    <h3>Submit Valuation Proposal</h3>
-                    <p>Institutional offers and strategic acquisition proposals are welcome.</p>
-                </div>
-                
-                <!-- /// UPDATE: Form action changed to new Formspree endpoint /// -->
-                <form id="offerForm" action="https://formspree.io/f/mykdddee" method="POST">
-                    <input type="hidden" name="_subject" value="New Valuation Proposal for BindingAffinity">
-                    <div class="form-group">
-                        <input type="number" name="amount" class="form-input" placeholder="Proposal Amount (USD)" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-input" placeholder="Corporate/Institutional Email" required>
-                    </div>
-                    <button type="submit" class="btn-submit">Submit Proposal</button>
-                </form>
-                <div id="form-status"></div>
-            </div>
-        </section>
-    </main>
+        <div id="resultPanel" class="hidden glass p-6 md:p-8 rounded-3xl">
+          <iframe id="molstar" src="https://www.rcsb.org/3d-view/1M14" width="100%" height="380" class="rounded-2xl border-0"></iframe>
+          <div class="mt-6 grid grid-cols-3 gap-3 text-xs md:text-sm text-center">
+            <div class="bg-slate-900/80 p-4 rounded-2xl">Predicted Kd: <span class="text-emerald-400 font-bold">12 nM</span></div>
+            <div class="bg-slate-900/80 p-4 rounded-2xl">ΔG: <span class="text-emerald-400 font-bold">-10.8 kcal/mol</span></div>
+            <div class="bg-slate-900/80 p-4 rounded-2xl">Binding Score: <span class="text-emerald-400 font-bold">High</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <section class="contact-section">
-            <div class="container">
-                <p style="margin-bottom: 15px; color: var(--text-muted);">Direct Inquiry</p>
-                <div class="copy-email" onclick="copyEmail()">joshua369x@gmail.com</div>
-                <p style="margin-top: 10px; font-size: 0.85rem; color: #444;">Click to copy address</p>
-                <p class="disclaimer">
-                    DISCLAIMER: "BINDING AFFINITY" IS A SCIENTIFIC TERM. ACQUISITION OF THESE DOMAINS GRANTS EXCLUSIVE CONTROL OVER THE DIGITAL ASSETS (BINDINGAFFINITY.COM/.AI) BUT DOES NOT IMPLY INTELLECTUAL PROPERTY OWNERSHIP OF THE SCIENTIFIC CONCEPT ITSELF.
-                </p>
-            </div>
-        </section>
-    </footer>
+  <!-- 12 Scientific Pillars（全部聚焦Binding Affinity） -->
+  <section id="pillars" class="py-20 md:py-32 relative z-10 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">12 Scientific Pillars of Binding Affinity</h2>
+      <div class="grid md:grid-cols-3 gap-8" id="pillarsGrid"></div>
+    </div>
+  </section>
 
-    <!-- TOAST -->
-    <div id="toast" class="toast"><i class="fa-solid fa-check" style="margin-right: 8px;"></i>Contact email copied to clipboard</div>
+  <!-- Future Vision -->
+  <section id="future" class="py-20 md:py-32 relative z-10 px-6 bg-black/70">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8">Future Vision 2024–2035</h2>
+      <iframe width="100%" height="420" src="https://www.youtube.com/embed/t3uQDL-GdLM" frameborder="0" allowfullscreen class="rounded-3xl shadow-2xl"></iframe>
+    </div>
+  </section>
 
-    <!-- /// UPDATE: New, improved form submission script /// -->
-    <script>
-        // Function to copy email (unchanged)
-        function copyEmail() {
-            const email = "joshua369x@gmail.com";
-            navigator.clipboard.writeText(email).then(function() {
-                var toast = document.getElementById("toast");
-                toast.className = "toast show";
-                setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
-            });
-        }
+  <!-- Enterprise Inquiry -->
+  <footer class="py-20 md:py-32 bg-gradient-to-b from-black to-[#0a0a0a] relative z-10 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready for Enterprise Partnership or Acquisition?</h2>
+      <p class="text-lg text-gray-400 mb-8">Submit your inquiry — we respond within 24 hours</p>
+      <form action="https://formsubmit.co/joshua369x@gmail.com" method="POST" class="space-y-6">
+        <input type="text" name="name" placeholder="Your Full Name" class="w-full glass p-6 rounded-3xl text-lg" required>
+        <input type="email" name="email" placeholder="Company Email Address" class="w-full glass p-6 rounded-3xl text-lg" required>
+        <input type="text" name="company" placeholder="Company / Institution" class="w-full glass p-6 rounded-3xl text-lg">
+        <button type="submit" class="w-full bg-white text-black py-7 text-xl font-bold rounded-3xl hover:bg-cyan-400 transition">Submit Inquiry</button>
+      </form>
+      <p class="mt-10 text-sm text-gray-500">Direct email: joshua369x@gmail.com</p>
+    </div>
+  </footer>
 
-        // --- New AJAX Offer Form Logic ---
-        function initOfferForm() {
-            const form = document.getElementById('offerForm');
-            if (!form) return;
+  <script>
+    // Three.js Background (与Conformation.AI完全一致)
+    let scene, camera, renderer, helix;
+    function initThree() {
+      const canvas = document.getElementById('threeCanvas');
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+      renderer = new THREE.WebGLRenderer({canvas, alpha: true});
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.position.z = window.innerWidth < 768 ? 55 : 40;
 
-            const statusDiv = document.getElementById('form-status');
-            const submitButton = form.querySelector('.btn-submit');
-            const originalButtonText = submitButton.innerHTML;
+      const particles = new THREE.BufferGeometry();
+      const count = 1800;
+      const pos = new Float32Array(count * 3);
+      for(let i = 0; i < count*3; i++) pos[i] = (Math.random()-0.5)*180;
+      particles.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      scene.add(new THREE.Points(particles, new THREE.PointsMaterial({size:0.13, color:'#00f5ff', transparent:true})));
 
-            const resetFormState = () => {
-                statusDiv.style.display = "none";
-                statusDiv.innerHTML = "";
-                submitButton.innerHTML = originalButtonText;
-                submitButton.disabled = false;
-            };
+      const points = [];
+      for(let i = 0; i < 100; i++) {
+        points.push(new THREE.Vector3(Math.sin(i*0.25)*9, i*0.35-18, Math.cos(i*0.25)*9));
+      }
+      helix = new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({color:'#b026ff', linewidth:4}));
+      scene.add(helix);
 
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // 1. Enter submitting state
-                statusDiv.innerHTML = "Submitting proposal...";
-                statusDiv.className = ""; // Reset classes
-                statusDiv.style.display = "block";
-                submitButton.innerHTML = "SUBMITTING...";
-                submitButton.disabled = true;
+      function animate() {
+        requestAnimationFrame(animate);
+        helix.rotation.y += 0.004;
+        renderer.render(scene, camera);
+      }
+      animate();
+    }
 
-                const formData = new FormData(form);
+    // 12个纯Binding Affinity医药领域
+    const pillarsData = [
+      {title:"Generative AIDD", desc:"AlphaFold and DiffDock models optimize loss functions based on predicted binding affinity — the score every AI drug design strives for."},
+      {title:"PROTACs & Molecular Glues", desc:"Binding affinity of the ternary complex determines degradation efficiency and selectivity."},
+      {title:"Cryo-EM & Structural Biology", desc:"Binding affinity validation through high-resolution conformational states."},
+      {title:"Immunotherapy Design", desc:"Precise TCR-antigen binding affinity is critical for safe and effective CAR-T therapies."},
+      {title:"Neurodegenerative Diseases", desc:"Misfolded protein binding affinity drives aggregation and toxicity in Alzheimer’s and prions."},
+      {title:"FDA Regulatory Compliance", desc:"Binding affinity data is mandatory for all small molecule and biologic approvals."},
+      {title:"Industrial Enzymes & Biologics", desc:"Engineered binding affinity enhances substrate specificity and catalytic efficiency."},
+      {title:"Quantum Biology in Drug Design", desc:"Electron transfer rates and nuclear conformation directly affect binding affinity."},
+      {title:"Biosensors for Drug Screening", desc:"Conformational change upon binding generates measurable affinity signals in HTS."},
+      {title:"Oncology Target Discovery", desc:"High-affinity binding to previously undruggable cancer targets."},
+      {title:"Antiviral Drug Development", desc:"Spike protein binding affinity predicts neutralization potency against variants."},
+      {title:"Gene Editing Optimization", desc:"Cas9-gRNA binding affinity controls editing precision and off-target effects."}
+    ];
 
-                // 2. Fetch request to Formspree
-                fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json' // Essential for AJAX with Formspree
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        // 3. Handle success
-                        statusDiv.innerHTML = "<strong>Proposal submitted!</strong> We will be in touch shortly.";
-                        statusDiv.className = "status-success";
-                        submitButton.innerHTML = "PROPOSAL SENT!";
-                        form.reset();
-                        setTimeout(resetFormState, 5000); // Reset after 5 seconds
-                    } else {
-                        // 4. Handle server-side errors
-                        return response.json().then(data => {
-                            let errorMsg = "An error occurred. Please try again.";
-                            if (data && data.errors) {
-                                errorMsg = data.errors.map(err => err.message).join(', ');
-                            }
-                            throw new Error(errorMsg);
-                        });
-                    }
-                })
-                .catch(error => {
-                    // 5. Handle network errors
-                    statusDiv.innerHTML = `<strong>Submission Failed.</strong><br>${error.message || "Please check your network or contact us directly."}`;
-                    statusDiv.className = "status-error";
-                    submitButton.innerHTML = originalButtonText;
-                    submitButton.disabled = false; // Re-enable button on error
-                    setTimeout(() => {
-                         statusDiv.style.display = "none";
-                    }, 5000); // Hide error message after 5 seconds
-                });
-            });
-        }
-        
-        // Initialize the form script when the page loads
-        document.addEventListener('DOMContentLoaded', initOfferForm);
+    function renderCards() {
+      const grid = document.getElementById('pillarsGrid');
+      pillarsData.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'glass p-8 rounded-3xl hover:border-cyan-400 transition-all hover:-translate-y-1';
+        card.innerHTML = `
+          <h3 class="text-xl font-bold text-cyan-400 mb-3">${p.title}</h3>
+          <p class="text-gray-300 text-sm">${p.desc}</p>
+        `;
+        grid.appendChild(card);
+      });
+    }
 
-    </script>
+    function runAIPrediction() {
+      const pdb = document.getElementById('pdbSelect').value;
+      document.getElementById('resultPanel').classList.remove('hidden');
+      document.getElementById('molstar').src = `https://www.rcsb.org/3d-view/${pdb}`;
+    }
+
+    window.onload = () => {
+      initThree();
+      renderCards();
+    };
+
+    window.addEventListener('resize', () => {
+      if(renderer) {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+      }
+    });
+  </script>
 </body>
 </html>
