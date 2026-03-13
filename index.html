@@ -23,23 +23,23 @@
 
   <style>
     body { font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; }
-    .neon-cyan { text-shadow: 0 0 25px #00f5ff, 0 0 50px #00f5ff; }
+    .neon-purple { text-shadow: 0 0 25px #b026ff, 0 0 50px #b026ff; }
     .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.12); }
   </style>
 </head>
 <body class="bg-[#0a0a0a] text-white min-h-screen relative">
 
-  <!-- Three.js Background (与Conformation.AI完全一致) -->
+  <!-- Three.js Background -->
   <canvas id="threeCanvas" class="fixed inset-0 z-0 opacity-75"></canvas>
 
-  <!-- Navbar (完全一致) -->
+  <!-- Navbar -->
   <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-xs md:text-sm">
-      <div class="text-3xl font-bold tracking-tighter neon-cyan">BindingAffinity<span class="text-[#00f5ff]">.AI</span></div>
+      <div class="text-3xl font-bold tracking-tighter neon-purple">BindingAffinity<span class="text-[#b026ff]">.AI</span></div>
       <div class="flex items-center gap-3 md:gap-8 font-medium">
-        <a href="#demo" class="hover:text-cyan-400">Demo</a>
-        <a href="#pillars" class="hover:text-cyan-400">12 Pillars</a>
-        <a href="#future" class="hover:text-cyan-400">Future Vision</a>
+        <a href="#demo" class="hover:text-purple-400">Demo</a>
+        <a href="#pillars" class="hover:text-purple-400">12 Pillars</a>
+        <a href="#future" class="hover:text-purple-400">Future Vision</a>
       </div>
     </div>
   </nav>
@@ -47,44 +47,44 @@
   <!-- Hero -->
   <header class="min-h-screen flex items-center relative z-10 pt-16 px-6 text-center">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-5xl md:text-7xl font-black tracking-tighter neon-cyan mb-6">The Molecular Currency of the AI Era</h1>
-      <p class="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto">BindingAffinity.AI — AI-powered binding affinity prediction for pharmaceutical drug discovery. The score every AI drug design model optimizes.</p>
+      <h1 class="text-5xl md:text-7xl font-black tracking-tighter neon-purple mb-6">The Molecular Currency of the AI Era</h1>
+      <p class="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto">BindingAffinity.AI — AI-powered binding affinity prediction. The score every drug design model optimizes.</p>
       <button onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})" 
-              class="mt-12 w-full max-w-xs mx-auto bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-cyan-300 hover:to-purple-400 text-black font-bold text-xl md:text-2xl px-10 py-6 rounded-3xl transition-all">
+              class="mt-12 w-full max-w-xs mx-auto bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-black font-bold text-xl md:text-2xl px-10 py-6 rounded-3xl transition-all">
         Experience AI Binding Affinity Prediction
       </button>
     </div>
   </header>
 
-  <!-- AI Demo (分子对接 + 亲和力预测) -->
+  <!-- AI Demo -->
   <section id="demo" class="py-20 md:py-32 bg-black/70 relative z-10 px-6">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">AI Binding Affinity Predictor</h2>
-      <p class="text-center text-lg text-gray-400 mb-10">Select a target → Run AI docking → Get predicted Kd / Ki in seconds</p>
+      <p class="text-center text-lg text-gray-400 mb-10">Select target → Run AI → Get predicted Kd / Ki</p>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="glass p-8 rounded-3xl">
-          <select id="pdbSelect" class="w-full bg-black/60 border border-cyan-400/30 rounded-2xl p-5 text-base focus:border-cyan-400">
+          <select id="pdbSelect" class="w-full bg-black/60 border border-purple-400/30 rounded-2xl p-5 text-base focus:border-purple-400">
             <option value="1M14">EGFR Kinase Domain (Cancer)</option>
             <option value="6VYB">SARS-CoV-2 Spike (Antiviral)</option>
             <option value="7KRR">BRD4 Bromodomain (Cancer)</option>
             <option value="6LZG">ACE2 Receptor (Cardio)</option>
           </select>
-          <button onclick="runAIPrediction()" class="mt-8 w-full bg-gradient-to-r from-emerald-400 to-cyan-400 text-black py-7 text-xl font-bold rounded-3xl hover:scale-105 transition">🚀 Run AI Affinity Prediction (2s)</button>
+          <button onclick="runAIPrediction()" class="mt-8 w-full bg-gradient-to-r from-purple-500 to-pink-500 text-black py-7 text-xl font-bold rounded-3xl hover:scale-105 transition">🚀 Run Affinity Prediction (2s)</button>
         </div>
 
         <div id="resultPanel" class="hidden glass p-6 md:p-8 rounded-3xl">
           <iframe id="molstar" src="https://www.rcsb.org/3d-view/1M14" width="100%" height="380" class="rounded-2xl border-0"></iframe>
           <div class="mt-6 grid grid-cols-3 gap-3 text-xs md:text-sm text-center">
-            <div class="bg-slate-900/80 p-4 rounded-2xl">Predicted Kd: <span class="text-emerald-400 font-bold">12 nM</span></div>
-            <div class="bg-slate-900/80 p-4 rounded-2xl">ΔG: <span class="text-emerald-400 font-bold">-10.8 kcal/mol</span></div>
-            <div class="bg-slate-900/80 p-4 rounded-2xl">Binding Score: <span class="text-emerald-400 font-bold">High</span></div>
+            <div class="bg-slate-900/80 p-4 rounded-2xl">Predicted Kd: <span class="text-pink-400 font-bold">12 nM</span></div>
+            <div class="bg-slate-900/80 p-4 rounded-2xl">ΔG: <span class="text-pink-400 font-bold">-10.8 kcal/mol</span></div>
+            <div class="bg-slate-900/80 p-4 rounded-2xl">Affinity Score: <span class="text-pink-400 font-bold">High</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 12 Scientific Pillars（全部聚焦Binding Affinity） -->
+  <!-- 12 Pillars -->
   <section id="pillars" class="py-20 md:py-32 relative z-10 px-6">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">12 Scientific Pillars of Binding Affinity</h2>
@@ -109,14 +109,14 @@
         <input type="text" name="name" placeholder="Your Full Name" class="w-full glass p-6 rounded-3xl text-lg" required>
         <input type="email" name="email" placeholder="Company Email Address" class="w-full glass p-6 rounded-3xl text-lg" required>
         <input type="text" name="company" placeholder="Company / Institution" class="w-full glass p-6 rounded-3xl text-lg">
-        <button type="submit" class="w-full bg-white text-black py-7 text-xl font-bold rounded-3xl hover:bg-cyan-400 transition">Submit Inquiry</button>
+        <button type="submit" class="w-full bg-white text-black py-7 text-xl font-bold rounded-3xl hover:bg-purple-400 transition">Submit Inquiry</button>
       </form>
       <p class="mt-10 text-sm text-gray-500">Direct email: joshua369x@gmail.com</p>
     </div>
   </footer>
 
   <script>
-    // Three.js Background (与Conformation.AI完全一致)
+    // Three.js Background (一致)
     let scene, camera, renderer, helix;
     function initThree() {
       const canvas = document.getElementById('threeCanvas');
@@ -131,7 +131,7 @@
       const pos = new Float32Array(count * 3);
       for(let i = 0; i < count*3; i++) pos[i] = (Math.random()-0.5)*180;
       particles.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-      scene.add(new THREE.Points(particles, new THREE.PointsMaterial({size:0.13, color:'#00f5ff', transparent:true})));
+      scene.add(new THREE.Points(particles, new THREE.PointsMaterial({size:0.13, color:'#b026ff', transparent:true})));
 
       const points = [];
       for(let i = 0; i < 100; i++) {
@@ -148,7 +148,7 @@
       animate();
     }
 
-    // 12个纯Binding Affinity医药领域
+    // 12个纯Binding Affinity领域
     const pillarsData = [
       {title:"Generative AIDD", desc:"AlphaFold and DiffDock models optimize loss functions based on predicted binding affinity — the score every AI drug design strives for."},
       {title:"PROTACs & Molecular Glues", desc:"Binding affinity of the ternary complex determines degradation efficiency and selectivity."},
@@ -168,9 +168,9 @@
       const grid = document.getElementById('pillarsGrid');
       pillarsData.forEach(p => {
         const card = document.createElement('div');
-        card.className = 'glass p-8 rounded-3xl hover:border-cyan-400 transition-all hover:-translate-y-1';
+        card.className = 'glass p-8 rounded-3xl hover:border-purple-400 transition-all hover:-translate-y-1';
         card.innerHTML = `
-          <h3 class="text-xl font-bold text-cyan-400 mb-3">${p.title}</h3>
+          <h3 class="text-xl font-bold text-purple-400 mb-3">${p.title}</h3>
           <p class="text-gray-300 text-sm">${p.desc}</p>
         `;
         grid.appendChild(card);
